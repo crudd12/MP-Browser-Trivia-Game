@@ -24,6 +24,6 @@
             - Move to the next set of questions and answers
             - Add 1 point to Lakers if correct answer was selected (store points)
             - Add 1 point to the Opponent if the wrong answer was selected (store points)
-        - Display Win/Loss modal when either the Lakers or Opponent reaches 5 points 
+        - Display Win/Loss modal when either the Lakers or the Opponent reaches 5 points 
             - Add "Lakers Win!" or "Lakers Lose" string to the modal based on results
             - Add Kobe Bryant image to modal
