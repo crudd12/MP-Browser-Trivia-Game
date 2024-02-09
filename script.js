@@ -22,8 +22,11 @@ function getTriviaData() {
     console.log(triviaQuestion, triviaAnswer);
 
     function displayTriviaData() {
-    document.getElementById("trivia-section").textContent = triviaData[0].question;
-    //    console.log(question);
+        document.querySelector('#trivia-section').textContent = triviaQuestion;
+
+        // addTriviaQuestion.textContent(triviaQuestion);
+        // addTriviaQuestion.append(test);
+        // document.getElementById("trivia-section").textContent = triviaQuestion;
     }
 
     displayTriviaData();

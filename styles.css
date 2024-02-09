@@ -18,9 +18,22 @@ body {
 
 .trivia-tiles {
     border: 2px solid black;
-    height: 15em;
+    height: 20em;
     width: 45%;
-    margin-top: 20px;
+    margin-top: 60px;
     color: black;
     background-color: yellow;
 }
+
+#main-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+/* #trivia-question {
+    border: 2px solid black;
+    height: 15px;
+    margin-top: 150px;
+    background-color: red;
+} */
