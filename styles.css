@@ -18,7 +18,7 @@ body {
 
 .trivia-tiles {
     border: 2px solid black;
-    height: 20em;
+    height: em;
     width: 45%;
     margin-top: 60px;
     color: black;
@@ -33,7 +33,7 @@ body {
 
 /* #trivia-question {
     border: 2px solid black;
-    height: 15px;
-    margin-top: 150px;
+    height: 5px;
+    margin-top: 50px;
     background-color: red;
 } */
