@@ -31,6 +31,12 @@ body {
     justify-content:space-evenly;
 }
 
+.score {
+    height:25px;
+    width: 20%;
+    border: 2px solid black
+}
+
 /* #trivia-question {
     border: 2px solid black;
     height: 5px;
