@@ -8,8 +8,8 @@ body {
     font-style: italic;
     font-family: sans-serif;
     font-weight: bold;
-    color: purple;
-    background-color: yellow;
+    color: #493092;
+    background-color: #eebe1e;
     text-align: center;
     height: 70px;
     font-size: 50px;
@@ -22,7 +22,7 @@ body {
     width: 45%;
     margin-top: 60px;
     color: black;
-    background-color: yellow;
+    background-color: #eebe1e;
 }
 
 #main-tiles {
