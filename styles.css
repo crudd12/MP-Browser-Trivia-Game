@@ -37,9 +37,12 @@ body {
     border: 2px solid black
 }
 
-/* #trivia-question {
+#game-result {
     border: 2px solid black;
-    height: 5px;
-    margin-top: 50px;
-    background-color: red;
-} */
+    height: 25em;
+    margin: 0 auto;
+    background-color: #493092;
+    width: 50%;
+    display: none;
+    color: white;
+}

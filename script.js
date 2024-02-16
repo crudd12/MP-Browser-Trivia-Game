@@ -4,9 +4,9 @@ const triviaData = [
             "In which city did Kareem Abdul-Jabbar break Wilt Chamberlain's record for most career points in NBA History?",
         answers: {
             a: "New York City",
-            rightAnswer: "Las Vegas",
             b: "Los Angeles",
             c: "Chicago",
+            rightAnswer: "Las Vegas",
         },
     },
     {
@@ -19,7 +19,81 @@ const triviaData = [
             rightAnswer: "New York Knicks",
         },
     },
+    {
+        question:
+            "The Lakers acquired forward Lamar Odom in the trade for Shaquille O'Neal. Which team did Odom come from?",
+        answers: {
+            a: "LA Clippers",
+            b: "Cleveland Cavaliers",
+            c: "Detroit Pistons",
+            rightAnswer: "Miami Heat",
+        },
+    },
+    {
+        question:
+            "What school did Laker Rick Fox attend?",
+        answers: {
+            a: "Clemson",
+            b: "Duke",
+            c: "Syracuse",
+            rightAnswer: "UNC",
+        },
+    },
+    {
+        question:
+            "The popular style of game play adapted by the Lakers that was ushered in by Magic Johnson was known as what?",
+        answers: {
+            a: "Gametime",
+            b: "Playtime",
+            c: "Wildtime",
+            rightAnswer: "Showtime",
+        },
+    },
+    {
+        question:
+            "Who is the Lakers' all-time leading scorer?",
+        answers: {
+            a: "Magic Joshnson",
+            b: "Lebron James",
+            c: "Shaquille O'Neal",
+            rightAnswer: "Kobe Bryant",
+        },
+    },
+    {
+        question:
+            "Which team did Shaq score 61 points against in 2000?",
+        answers: {
+            a: "Dallas Mavericks",
+            b: "Memphis Grizzlies",
+            c: "Milwaukee Bucks",
+            rightAnswer: "Los Angeles Clippers",
+        },
+    },
+    {
+        question:
+            "At 6-9, Magic Johnson officially played what position?",
+        answers: {
+            a: "Small Forward",
+            b: "Shooting Guard",
+            c: "Center",
+            rightAnswer: "Point Guard",
+        },
+    },
+    {
+        question:
+            "Which Laker was famous for his \"skyhook\" shot?",
+        answers: {
+            a: "Pau Gasol",
+            b: "Shaquille O'Neal",
+            c: "Wilt Chamberlain",
+            rightAnswer: "Kareem Abdul-Jabbar",
+        },
+    },
 ];
+
+
+let lakersScore = 0;
+let opponentsScore = 0;
 
 function lakersGame() {
     let triviaQuestion = document.querySelector("#trivia-question");
@@ -29,10 +103,9 @@ function lakersGame() {
     let rightAnswer = document.querySelector("#Option-RightAnswer");
     let questionButton = document.querySelector('#question-button');
     let i = 0;
+    let resultModal = document.querySelector('#game-result');
 
 
-    //pushes trivia questions and answers
-    // for (i = 0; i < triviaData.length; i++) {
     function updateQuestion() {
         triviaQuestion.textContent = triviaData[i].question;
         optionA.textContent = triviaData[i].answers.a;
@@ -42,12 +115,13 @@ function lakersGame() {
 
         let ul = document.querySelector('#list-items');
         let shuffleList = document.querySelectorAll('li');
-        for (let a = 0; a < shuffleList.length -1; a++) {
+        for (let a = 0; a < shuffleList.length - 1; a++) {
             ul.appendChild(shuffleList[a]);
         }
 
         questionButton.addEventListener('click', () => {
-            i += 1;
+            i ++;
+            console.log(i);
             optionA.style.removeProperty('color');
             optionA.style.removeProperty('font-weight');
             optionB.style.removeProperty('color');
@@ -63,66 +137,85 @@ function lakersGame() {
     updateQuestion();
 
     function getScore() {
-        let lakersScore = 0;
-        let opponentsScore = 0;
 
         optionA.addEventListener("click", () => {
             opponentsScore += 1;
             optionA.style.color = "red";
             optionA.style.fontWeight = "bolder";
-            console.log(opponentsScore);
 
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
             }, 250);
+
+            getResults();
         });
 
         optionB.addEventListener("click", () => {
             opponentsScore += 1;
             optionB.style.color = "red";
             optionB.style.fontWeight = "bolder";
-            console.log(opponentsScore);
 
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
             }, 250);
+
+            getResults();
         });
 
         optionC.addEventListener("click", () => {
             opponentsScore += 1;
             optionC.style.color = "red";
             optionC.style.fontWeight = "bolder";
-            console.log(opponentsScore);
 
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
             }, 250);
+
+            getResults();
         });
 
         rightAnswer.addEventListener("click", () => {
             lakersScore += 1;
             rightAnswer.style.color = "green";
             rightAnswer.style.fontWeight = "bolder";
-            console.log(lakersScore);
 
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
             }, 250);
+
+            getResults();
+
         });
 
-        // if (lakersScore = 2) {
-
-        // }
     }
 
     getScore();
+
+    function getResults() {
+        if (lakersScore === 5) {
+            resultModal.style.display = 'block';
+            resultModal.textContent = 'Lakers Win!'
+            console.log("You win!");
+        } else if (opponentsScore === 5) {
+            resultModal.style.display = 'block';
+            resultModal.textContent = 'Lakers Lose.'
+            console.log("You lose!");
+        } else {
+            resultModal.style.display = 'none';
+        }
+    };
+
+    getResults();
+
 }
 
 lakersGame();
+
+
 
 
 
