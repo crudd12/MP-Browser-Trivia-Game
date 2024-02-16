@@ -105,6 +105,13 @@ function lakersGame() {
     let i = 0;
     let resultModal = document.querySelector('#game-result');
 
+    function setQuestion() {
+        triviaQuestion.textContent = triviaData[i].question;
+        optionA.textContent = triviaData[i].answers.a;
+        optionB.textContent = triviaData[i].answers.b;
+        optionC.textContent = triviaData[i].answers.c;
+        rightAnswer.textContent = triviaData[i].answers.rightAnswer;
+    }
 
     function updateQuestion() {
         triviaQuestion.textContent = triviaData[i].question;
@@ -113,6 +120,7 @@ function lakersGame() {
         optionC.textContent = triviaData[i].answers.c;
         rightAnswer.textContent = triviaData[i].answers.rightAnswer;
 
+
         let ul = document.querySelector('#list-items');
         let shuffleList = document.querySelectorAll('li');
         for (let a = 0; a < shuffleList.length - 1; a++) {
@@ -120,8 +128,7 @@ function lakersGame() {
         }
 
         questionButton.addEventListener('click', () => {
-            i ++;
-            console.log(i);
+            i++;
             optionA.style.removeProperty('color');
             optionA.style.removeProperty('font-weight');
             optionB.style.removeProperty('color');
@@ -130,7 +137,7 @@ function lakersGame() {
             optionC.style.removeProperty('font-weight');
             rightAnswer.style.removeProperty('color');
             rightAnswer.style.removeProperty('font-weight');
-            updateQuestion();
+            setQuestion();
         })
     }
 
