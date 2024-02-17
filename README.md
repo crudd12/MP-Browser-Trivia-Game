@@ -6,8 +6,6 @@
 ## How to play
 #### Help the Lakers win the championship! As the Lakers, the player must answer 5 trivia questions correctly before their opponent. The opponent will receive points for every trivia question the Lakers answer wrong. 
 
-##
-
 ### What is needed to build game:
 
     Game view: 
