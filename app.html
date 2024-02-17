@@ -10,39 +10,66 @@
 
 
 <body>
-
     <header>
         <div id="banner">
             Lakers Trivia
         </div>
     </header>
 
+    <nav>
+        <div id="play-game">
+            <p>
+                <b>How to play:</b> Help the Lakers win the championship! As the Lakers, you must answer 5 trivia
+                questions correctly before your opponent. The opponent will receive a point for every trivia question
+                the you answer wrong.
+            </p>
+        </div>
+    </nav>
+
     <main>
         <section id="main-tiles">
             <div class="trivia-tiles" id="trivia-section">
                 <div id="trivia-question"></div>
                 <div id="trivia-answers">
-                    <ul id="list-items">
+                    <ol type="A" id="list-items">
                         <li id="Option-A"></li>
                         <li id="Option-B"></li>
                         <li id="Option-C"></li>
                         <li id="Option-RightAnswer"></li>
-                    </ul>
+                    </ol>
                     <button id="question-button">Next Question</button>
                 </div>
             </div>
 
             <div class="trivia-tiles" id="trivia-score">
                 <h1>Scoreboard</h1>
-                <div>Lakers</div>
+                <!-- <div>Lakers</div> -->
+                <div id="scoreboard">
+                    <div class="team-name">Lakers</div>
+                    <!-- <div id="lakers-Score" class="score">0</div> -->
+                    <div class="team-name">Opponents</div>
+                    <!-- <div id="lakers-Score" class="score">0</div>
+                    <div id="opponents-Score" class="score">0</div> -->
+                </div>
+                <div id="score-numbers"></div>
                 <div id="lakers-Score" class="score">0</div>
-                <div>Opponents</div>
                 <div id="opponents-Score" class="score">0</div>
             </div>
+
+            <section id="results-section">
+                <div class="game-result" id="lakers-win">
+                    <h2>Lakers Win!</h2>
+                    <iframe src="https://giphy.com/embed/2imYoK5Ix7sNvM5Va2" width="480" height="270"
+                        frameBorder="0"></iframe>
+                </div>
+                <div class="game-result" id="lakers-lose">
+                    <h2>Lakers Lose.</h2>
+                    <img src="https://www.usatoday.com/gcdn/media/USATODAY/USATODAY/2013/04/13/ap-warriors-lakers-basketball-16_9.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp"
+                        width="480" height="270" alt="Kobe Bryant mad">
+                </div>
+            </section>
         </section>
     </main>
-    
-    <div id="game-result"></div>
 
     <script src="script.js"></script>
 </body>

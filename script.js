@@ -103,7 +103,8 @@ function lakersGame() {
     let rightAnswer = document.querySelector("#Option-RightAnswer");
     let questionButton = document.querySelector('#question-button');
     let i = 0;
-    let resultModal = document.querySelector('#game-result');
+    let lakersWinModal = document.querySelector('#lakers-win');
+    let lakersLoseModal = document.querySelector('#lakers-lose');
 
     function setQuestion() {
         triviaQuestion.textContent = triviaData[i].question;
@@ -121,10 +122,10 @@ function lakersGame() {
         rightAnswer.textContent = triviaData[i].answers.rightAnswer;
 
 
-        let ul = document.querySelector('#list-items');
+        let ol = document.querySelector('#list-items');
         let shuffleList = document.querySelectorAll('li');
         for (let a = 0; a < shuffleList.length - 1; a++) {
-            ul.appendChild(shuffleList[a]);
+            ol.appendChild(shuffleList[a]);
         }
 
         questionButton.addEventListener('click', () => {
@@ -204,15 +205,14 @@ function lakersGame() {
 
     function getResults() {
         if (lakersScore === 5) {
-            resultModal.style.display = 'block';
-            resultModal.textContent = 'Lakers Win!'
+            lakersWinModal.style.display = 'block';
             console.log("You win!");
         } else if (opponentsScore === 5) {
-            resultModal.style.display = 'block';
-            resultModal.textContent = 'Lakers Lose.'
+            lakersLoseModal.style.display = 'block';
             console.log("You lose!");
         } else {
-            resultModal.style.display = 'none';
+            lakersLoseModal.style.display = 'none';
+            lakersWinModal.style.display = 'none';
         }
     };
 
