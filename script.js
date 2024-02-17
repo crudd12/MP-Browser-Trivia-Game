@@ -112,6 +112,12 @@ function lakersGame() {
         optionB.textContent = triviaData[i].answers.b;
         optionC.textContent = triviaData[i].answers.c;
         rightAnswer.textContent = triviaData[i].answers.rightAnswer;
+
+        let ol = document.querySelector('#list-items');
+        let shuffleList = document.querySelectorAll('li');
+        for (let a = 0; a < shuffleList.length - 1; a++) {
+            ol.appendChild(shuffleList[a]);
+        }
     }
 
     function updateQuestion() {
@@ -120,13 +126,6 @@ function lakersGame() {
         optionB.textContent = triviaData[i].answers.b;
         optionC.textContent = triviaData[i].answers.c;
         rightAnswer.textContent = triviaData[i].answers.rightAnswer;
-
-
-        let ol = document.querySelector('#list-items');
-        let shuffleList = document.querySelectorAll('li');
-        for (let a = 0; a < shuffleList.length - 1; a++) {
-            ol.appendChild(shuffleList[a]);
-        }
 
         questionButton.addEventListener('click', () => {
             i++;
@@ -221,96 +220,3 @@ function lakersGame() {
 }
 
 lakersGame();
-
-
-
-
-
-
-
-// function displayScore() {
-//     document.querySelector('#lakers-Score').textContent = lakersScore;
-//     document.querySelector('#opponents-Score').textContent = opponentsScore;
-// }
-
-// displayScore();
-
-// function displayTriviaData() {
-//     let addTriviaQuestion = document.createElement('div');
-//     addTriviaQuestion.textContent(triviaQuestion);
-//     document.getElementById("trivia-section").textContent = triviaData[0].question;
-//     addTriviaQuestion.appendChild(triviaSection);
-// };
-
-// displayTriviaData();
-
-// document.querySelector('#trivia-section').textContent = triviaQuestion;
-// document.querySelector('#trivia-question').textContent = triviaQuestion;
-// const triviaOptions = `${triviaData[0].rightAnswer}, ${triviaData[0].wrongAnswer1}, ${triviaData[0].wrongAnswer2}, ${triviaData[0].wrongAnswer3}`
-// let triviaOptions = triviaData[0].wrongAnswers;
-// console.log(triviaOptions);
-// const ul = document.createElement('ul');
-// triviaOptions.appendChild(ul);
-// li.textContent = `${triviaData[0].rightAnswer}`;
-// document.querySelector('#trivia-answers').textContent =
-
-//     const triviaAnswers = document.querySelector('#trivia-answers');
-//    const ul = document.createElement('ul');
-//     triviaAnswers.appendChild(ul);
-// li.textContent = `${triviaData[0].rightAnswer}`;
-// for (let i=0; i < triviaData; i++ {
-//     const answersList = triviaData[i];
-//     const li = document.createElement('li');
-//     li.textContent =
-// })
-// ul.appendChild(li);
-// addTriviaQuestion.textContent(triviaQuestion);
-// addTriviaQuestion.append(test);
-// document.getElementById("trivia-section").textContent = triviaQuestion;
-
-// document.querySelector('#trivia-answers').textContent = triviaAnswers;
-// let pushAnswers = document.querySelector('#trivia-answers');
-
-// for (var i = 0; i < triviaData.length; i++) {
-
-//     var item = triviaData[i].answers;
-
-//     Object.keys(item).forEach(function(key) {
-
-//       console.log(item[key]); // This will provide you the value for each key.
-
-//     });
-
-//   }
-
-// let pushAnswers = document.querySelector('#trivia-answers');
-// let li = document.createElement('li');
-// li.textContent = triviaData[0].answers.a;
-// pushAnswers.appendChild(li);
-
-// function displayTriviaData() {
-//     document.querySelector('#trivia-question').textContent = triviaQuestion;
-//     // document.querySelector('#trivia-answers').textContent = triviaAnswers;
-//     let triviaOptions = triviaData[0].wrongAnswers;
-//     console.log(triviaOptions);
-//     const ul = document.createElement('ul');
-//     triviaOptions.appendChild(ul);
-//     li.textContent = `${triviaData[0].rightAnswer}`;
-//     // document.querySelector('#trivia-answers').textContent =
-
-//     //     const triviaAnswers = document.querySelector('#trivia-answers');
-//     //    const ul = document.createElement('ul');
-//     //     triviaAnswers.appendChild(ul);
-//     // li.textContent = `${triviaData[0].rightAnswer}`;
-//     // for (let i=0; i < triviaData; i++ {
-//     //     const answersList = triviaData[i];
-//     //     const li = document.createElement('li');
-//     //     li.textContent =
-//     // })
-//     // ul.appendChild(li);
-//     // addTriviaQuestion.textContent(triviaQuestion);
-//     // addTriviaQuestion.append(test);
-//     // document.getElementById("trivia-section").textContent = triviaQuestion;
-// }
-
-// displayTriviaData();
