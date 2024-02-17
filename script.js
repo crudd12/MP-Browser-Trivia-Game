@@ -154,7 +154,7 @@ function lakersGame() {
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
-            }, 250);
+            }, 0);
 
             getResults();
         });
@@ -167,7 +167,7 @@ function lakersGame() {
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
-            }, 250);
+            }, 0);
 
             getResults();
         });
@@ -180,7 +180,7 @@ function lakersGame() {
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
-            }, 250);
+            }, 0);
 
             getResults();
         });
@@ -193,7 +193,7 @@ function lakersGame() {
             setTimeout(() => {
                 document.querySelector("#lakers-Score").textContent = lakersScore;
                 document.querySelector("#opponents-Score").textContent = opponentsScore;
-            }, 250);
+            }, 0);
 
             getResults();
 
@@ -221,6 +221,7 @@ function lakersGame() {
 }
 
 lakersGame();
+
 
 
 
