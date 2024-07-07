@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakers Trivia Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 
@@ -44,22 +44,22 @@
             <div class="trivia-tiles" id="trivia-score">
                 <h1>Scoreboard</h1>
                 <div id="scoreboard">
-                    <div class="team-name">Lakers</div>
-                    <div class="team-name">Opponent</div>
+                    <div id="score-numbers">
+                        <div id="lakers-Score" class="score">0</div>
+                        <div id="opponents-Score" class="score">0</div>
+                    </div>
+                    <div class="team-names">
+                        <div class="team-name">Lakers</div>
+                        <div class="team-name">Opponent</div>
+                    </div>
                 </div>
-
-                <div id="score-numbers">
-                    <div id="lakers-Score" class="score">0</div>
-                    <div id="opponents-Score" class="score">0</div>
-                </div>
-
             </div>
 
             <section id="results-section">
                 <div class="game-result" id="lakers-win">
                     <h2>Lakers Win!</h2>
                     <iframe src="https://giphy.com/embed/2imYoK5Ix7sNvM5Va2" width="480" height="270"
-                        frameBorder="0"></iframe>    
+                        frameBorder="0"></iframe>
                 </div>
                 <div class="game-result" id="lakers-lose">
                     <h2>Lakers Lose.</h2>

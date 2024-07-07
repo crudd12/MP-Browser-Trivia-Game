@@ -1,0 +1,9 @@
+$lightened-color: lighten(#493092, 15%);
+$background-dark: darken(#dcd4c5, 10%);
+
+@function check-color($color) {
+ @if type-of($color) != color {
+   @error "Error: #{$color} is obviously not a color.";
+ }
+ @return $color;
+}

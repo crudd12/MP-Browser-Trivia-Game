@@ -1,0 +1,15 @@
+#banner {
+ font-style: italic;
+ font-weight: $font-weight-bold;
+ color: $primary-color;
+ background-color: $secondary-color;
+ text-align: center;
+ height: 70px;
+ font-size: $font-size-large;
+ padding-top: $spacing-medium;
+
+ &--highlight {
+   background-color: $highlight-color;
+   color: $light-color;
+ }
+}
